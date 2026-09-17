@@ -63,9 +63,9 @@ No cyclic rotation is good because the two sums are equal for every rotation. Th
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 55.67%)  
-**Memory:** 103.1 MB (beats 83.75%)  
-**Submitted:** 2026-09-17T17:18:41.433Z  
+**Runtime:** 3 ms (beats 69.48%)  
+**Memory:** 103.2 MB (beats 38.87%)  
+**Submitted:** 2026-09-17T18:47:49.022Z  
 
 ```cpp
 class Solution {
