@@ -56,17 +56,45 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:05:15.137Z  
+**Submitted:** 2026-09-30T15:07:54.360Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N, M, K;
+        cin >> N >> M >> K;
+
+        vector<bool> occupied(N + 1, false);
+
+        // Mark already occupied seats
+        for (int i = 0; i < M; i++) {
+            int seat;
+            cin >> seat;
+            occupied[seat] = true;
+        }
+
+        // K people enter one by one
+        for (int person = 0; person < K; person++) {
+            for (int seat = 1; seat <= N; seat++) {
+                if (!occupied[seat]) {
+                    cout << seat << " ";
+                    occupied[seat] = true;
+                    break;
+                }
+            }
+        }
+
+        cout << '\n';
+    }
+
+    return 0;
 }
-
 ```
 
 ---
