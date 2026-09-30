@@ -57,7 +57,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:56:11.388Z  
+**Submitted:** 2026-09-30T14:57:30.295Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,12 +66,8 @@ using namespace std;
 int main() {
 	int B,C,H;
 	cin>>B>>H>>C;
-	if(2*B<=H+C){
-	    cout<<B/2;
-	}
-	else{
-	    cout<<H+C;
-	}
+   cout<<min(B/2,C+H);
+   return 0;
 }
 
 ```
