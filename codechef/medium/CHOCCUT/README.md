@@ -54,15 +54,29 @@ No
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:00:59.767Z  
+**Submitted:** 2026-09-30T15:01:08.300Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N, M;
+        cin >> N >> M;
+
+        if (N % 2 == 0 || M % 2 == 0) {
+            cout << "Yes" << endl;
+        }
+        else {
+            cout << "No" << endl;
+        }
+    }
+
+    return 0;
 }
 
 ```
