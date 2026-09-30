@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int B,C,H;
+	cin>>B>>H>>C;
+	if(2*B<=H+C){
+	    cout<<B/2;
+	}
+	else{
+	    cout<<H+C;
+	}
+}
