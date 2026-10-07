@@ -80,15 +80,32 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:16:32.400Z  
+**Submitted:** 2026-10-07T15:20:56.519Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        string s;
+        cin >> n >> s;
+        int x = 0, y = 0;
+        for (char c : s) {
+            if (c == 'U') y++;
+            else if (c == 'D') y--;
+            else if (c == 'L') x--;
+            else if (c == 'R') x++;
+        }
+        if ((x == 0 && (y == 2 || y == -2)) || (y == 0 && (x == 2 || x == -2)))
+            cout << "YES\n";
+        else
+            cout << "NO\n";
+    }
+    return 0;
 }
 
 ```
