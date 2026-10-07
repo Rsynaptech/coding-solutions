@@ -80,57 +80,17 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:17:17.077Z  
+**Submitted:** 2026-10-07T15:16:32.400Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int T;
-    cin >> T;
+	// your code goes here
 
-    while (T--) {
-        int N;
-        cin >> N;
-
-        string S;
-        cin >> S;
-
-        int x = 0, y = 0;
-
-        for (int i = 0; i < N; i++) {
-            if (S[i] == 'U')
-                y++;
-            else if (S[i] == 'D')
-                y--;
-            else if (S[i] == 'L')
-                x--;
-            else
-                x++;
-        }
-
-        int possible = 0;
-
-        for (int i = 0; i < N; i++) {
-            if (S[i] == 'U' && y == 2)
-                possible = 1;
-            else if (S[i] == 'D' && y == -2)
-                possible = 1;
-            else if (S[i] == 'L' && x == -2)
-                possible = 1;
-            else if (S[i] == 'R' && x == 2)
-                possible = 1;
-        }
-
-        if (possible == 1)
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
-    }
-
-    return 0;
 }
+
 ```
 
 ---
