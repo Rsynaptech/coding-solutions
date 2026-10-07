@@ -62,17 +62,50 @@ abcdefghijklmnopqrstuvwxyz
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:11:09.633Z  
+**Submitted:** 2026-10-07T15:18:04.199Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N, M;
+        cin >> N >> M;
+
+        string S, L;
+        cin >> S >> L;
+
+        int count = 1;
+        int ans = 1;
+
+        for (int i = 1; i < N; i++) {
+            int a = 0, b = 0;
+
+            for (int j = 0; j < M; j++) {
+                if (S[i] == L[j])
+                    a = 1;
+
+                if (S[i - 1] == L[j])
+                    b = 1;
+            }
+
+            if (a == b)
+                count++;
+            else
+                count = 1;
+
+            ans = max(ans, count);
+        }
+
+        cout << ans << endl;
+    }
+
+    return 0;
 }
-
 ```
 
 ---
