@@ -2,24 +2,5 @@
 using namespace std;
 
 int main() {
-int T;
-cin >> T;
-while (T--) {
-    long long N;
-    int D;
-    cin >> N >> D;
-
-    while (true) {
-        string s = to_string(N);
-
-        if (s.find('0' + D) == string::npos) {
-            cout << N << endl;
-            break;
-        }
-
-        N++;
-    }
-}
-
-return 0;
-}
+     int T;
+    cin >> T;
