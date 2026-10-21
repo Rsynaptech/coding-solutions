@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:28:37.362Z  
+**Submitted:** 2026-10-21T15:27:42.700Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -62,69 +62,25 @@ using namespace std;
 int main() {
 int T;
 cin >> T;
-
-```
 while (T--) {
     long long N;
     int D;
     cin >> N >> D;
 
-    string s = to_string(N);
+    while (true) {
+        string s = to_string(N);
 
-    if (D == 0) {
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] == '0') {
-                s[i] = '1';
-                for (int j = i + 1; j < s.size(); j++) {
-                    s[j] = '1';
-                }
-                break;
-            }
-        }
-
-        cout << stoll(s) << endl;
-        continue;
-    }
-
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] == '0' + D) {
-            if (i == 0) {
-                if (D == 9) {
-                    s = string(s.size() + 1, '1');
-                } else {
-                    s[i] = '0' + D + 1;
-                    for (int j = i + 1; j < s.size(); j++) {
-                        s[j] = '0';
-                    }
-                }
-            } else {
-                int j = i - 1;
-
-                while (j >= 0 && s[j] == '0' + D - 1) {
-                    j--;
-                }
-
-                if (j < 0) {
-                    s = string(s.size() + 1, '1');
-                } else {
-                    s[j]++;
-                    for (int k = j + 1; k < s.size(); k++) {
-                        s[k] = '0';
-                    }
-                }
-            }
+        if (s.find('0' + D) == string::npos) {
+            cout << N << endl;
             break;
         }
-    }
 
-    cout << stoll(s) << endl;
+        N++;
+    }
 }
 
 return 0;
-```
-
 }
-
 
 ```
 
