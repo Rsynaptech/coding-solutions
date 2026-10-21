@@ -53,35 +53,15 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:25:12.998Z  
+**Submitted:** 2026-10-21T15:24:32.699Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-int T;
-cin >> T;
-while (T--) {
-    long long N;
-    int D;
-    cin >> N >> D;
-
-    while (true) {
-        string s = to_string(N);
-
-        if (s.find('0' + D) == string::npos) {
-            cout << N << endl;
-            break;
-        }
-
-        N++;
-    }
-}
-
-return 0;
-}
-
+     int T;
+    cin >> T;
 ```
 
 ---
