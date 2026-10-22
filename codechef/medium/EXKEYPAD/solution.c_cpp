@@ -2,47 +2,68 @@
 using namespace std;
 
 int main() {
-    int T;
-    cin >> T;
+int T;
+cin >> T;
 
-    while (T--) {
-        long long N;
-        int D;
-        cin >> N >> D;
+```
+while (T--) {
+    long long N;
+    int D;
+    cin >> N >> D;
 
-        string s = to_string(N);
+    string s = to_string(N);
 
-        while (true) {
-            bool found = false;
+    if (D == 0) {
+        for (int i = 0; i < s.size(); i++) {
+            if (s[i] == '0') {
+                s[i] = '1';
+                for (int j = i + 1; j < s.size(); j++) {
+                    s[j] = '1';
+                }
+                break;
+            }
+        }
 
-            for (int i = 0; i < s.size(); i++) {
-                if (s[i] == char('0' + D)) {
-                    s[i]++;
+        cout << stoll(s) << endl;
+        continue;
+    }
+
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] == '0' + D) {
+            if (i == 0) {
+                if (D == 9) {
+                    s = string(s.size() + 1, '1');
+                } else {
+                    s[i] = '0' + D + 1;
                     for (int j = i + 1; j < s.size(); j++) {
                         s[j] = '0';
                     }
-                    found = true;
-                    break;
                 }
-            }
+            } else {
+                int j = i - 1;
 
-            if (!found) {
-                cout << s << '\n';
-                break;
-            }
+                while (j >= 0 && s[j] == '0' + D - 1) {
+                    j--;
+                }
 
-            for (int i = s.size() - 1; i >= 0; i--) {
-                if (s[i] > '9') {
-                    if (i == 0) {
-                        s = '1' + string(s.size(), '0');
-                        break;
+                if (j < 0) {
+                    s = string(s.size() + 1, '1');
+                } else {
+                    s[j]++;
+                    for (int k = j + 1; k < s.size(); k++) {
+                        s[k] = '0';
                     }
-                    s[i] = '0';
-                    s[i - 1]++;
                 }
             }
+            break;
         }
     }
 
-    return 0;
+    cout << stoll(s) << endl;
 }
+
+return 0;
+```
+
+}
+
