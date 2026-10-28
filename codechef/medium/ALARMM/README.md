@@ -70,39 +70,17 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:48:58.498Z  
+**Submitted:** 2026-10-28T16:47:15.295Z  
 
 ```c_cpp
-
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int T;
-    cin >> T;
+	// your code goes here
 
-    while (T--) {
-        int N, K;
-        cin >> N >> K;
-
-        string S;
-        cin >> S;
-
-        int ans = 0;
-        int last = -1;
-
-        for (int i = 0; i < N; i++) {
-            if (S[i] == '1' && i > last) {
-                ans++;
-                last = i + K;
-            }
-        }
-
-        cout << ans << endl;
-    }
-
-    return 0;
 }
+
 ```
 
 ---
