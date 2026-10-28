@@ -70,9 +70,10 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:47:57.662Z  
+**Submitted:** 2026-10-28T16:48:58.498Z  
 
 ```c_cpp
+
 #include <iostream>
 using namespace std;
 
@@ -81,25 +82,19 @@ int main() {
     cin >> T;
 
     while (T--) {
-        int N;
-        cin >> N;
+        int N, K;
+        cin >> N >> K;
 
         string S;
         cin >> S;
 
-        int count = 1;
         int ans = 0;
+        int last = -1;
 
-        for (int i = 1; i < N; i++) {
-            if (S[i] == S[i - 1]) {
-                count++;
-            } else {
-                count = 1;
-            }
-
-            if (count == 3) {
+        for (int i = 0; i < N; i++) {
+            if (S[i] == '1' && i > last) {
                 ans++;
-                count = 0;
+                last = i + K;
             }
         }
 
