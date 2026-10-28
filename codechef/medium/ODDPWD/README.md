@@ -78,15 +78,20 @@ The password is `WEC`.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:44:18.797Z  
+**Submitted:** 2026-10-28T16:45:06.252Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+
+#include <iostream>
 using namespace std;
 
 int main() {
-	// your code goes here
+    string S;
+    cin >> S;
 
+    cout << S[0] << S[2] << S[4];
+
+    return 0;
 }
 
 ```
