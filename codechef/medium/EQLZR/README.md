@@ -68,17 +68,61 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:49:36.406Z  
+**Submitted:** 2026-10-28T16:50:12.753Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int T;
+    cin >> T;
 
+    while (T--) {
+        int N;
+        cin >> N;
+
+        vector<long long> A(N);
+
+        for (int i = 0; i < N; i++) {
+            cin >> A[i];
+        }
+
+        int score = 0;
+
+        for (int i = 0; i < N - 1; i++) {
+            if (A[i] == A[i + 1]) {
+                score++;
+            }
+        }
+
+        int ans = score;
+
+        for (int i = 0; i < N; i++) {
+            int gain = 0;
+
+            if (i > 0) {
+                if (A[i - 1] == A[i] + 1) gain++;
+                if (A[i - 1] == A[i]) gain--;
+            }
+
+            if (i < N - 1) {
+                if (A[i + 1] == A[i] + 1) gain++;
+                if (A[i + 1] == A[i]) gain--;
+            }
+
+            if (gain > 0) {
+                ans = score + gain;
+            }
+        }
+
+        cout << ans << endl;
+    }
+
+    return 0;
 }
-
 ```
 
 ---
