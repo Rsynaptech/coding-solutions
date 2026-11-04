@@ -72,14 +72,53 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T16:10:32.279Z  
+**Submitted:** 2026-11-04T16:11:06.340Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+int t;
+cin >> t;
+
+```
+while (t--) {
+    int n;
+    cin >> n;
+
+    int a[101];
+
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    int ans = 0;
+
+    for (int i = 0; i < n; i++) {
+        int count = 0;
+
+        for (int j = i; j < n; j++) {
+
+            if (a[j] % 2 != 0) {
+                count++;
+            }
+
+            if (count % 2 == 0) {
+                int len = j - i + 1;
+
+                if (len > ans) {
+                    ans = len;
+                }
+            }
+        }
+    }
+
+    cout << ans << endl;
+}
+
+return 0;
+```
 
 }
 
