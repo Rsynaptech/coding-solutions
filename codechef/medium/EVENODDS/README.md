@@ -72,7 +72,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T16:11:15.288Z  
+**Submitted:** 2026-11-04T16:11:23.635Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -82,7 +82,6 @@ int main() {
 int t;
 cin >> t;
 
-```
 while (t--) {
     int n;
     cin >> n;
@@ -118,7 +117,6 @@ while (t--) {
 }
 
 return 0;
-```
 
 }
 
